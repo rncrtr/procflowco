@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+	h1.
+		Flow ID #{flow._id}
+	form(action='/flows/#{flow._id}/edit',method='post',name='updateflow',enctype='application/x-www-form-urlencoded')
+		p Title:
+			input#inputName(type='text',value='#{flow.title}',name='title')
+		p URL:
+			input#inputName(type='text',value='#{flow.url}',name='url')

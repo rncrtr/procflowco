@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+	h1.
+		#{title}
+	form#formAddFlow(name='addFlow',method='post',action='/flows')
+		p Name:
+			input#inputName(type='text', placeholder='ex. John Smith', name='name')
+		p URL:
+			input#inputURL(type='text',placeholder='',name='url')
+		p
+			button#btnSubmit(type='submit', class='btn btn-primary') Submit
